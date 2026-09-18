@@ -1,0 +1,203 @@
+/* Reset e Variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --primary-color: #f4b41a; /* Dourado estúdio */
+    --primary-hover: #d19a16;
+    --text-light: #f5f5f5;
+    --text-muted: #aaaaaa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #000000 0%, var(--bg-color) 100%);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Container Principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Player Section */
+.player-section, .feedback-section, .comments-section {
+    margin-bottom: 40px;
+}
+
+.player-section h2, .feedback-section h2, .comments-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.audio-card {
+    background-color: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.vinyl-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.audio-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.artist-name {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+audio {
+    width: 100%;
+    outline: none;
+    border-radius: 30px;
+}
+
+/* Esconder botão de download em navegadores baseados em Chromium */
+audio::-webkit-media-controls-enclosure {
+    border-radius: 30px;
+}
+
+/* Form de Feedback */
+form {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Comentários */
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.comment-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.comment-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.comment-body {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a0a;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .audio-card {
+        padding: 20px 10px;
+    }
+}

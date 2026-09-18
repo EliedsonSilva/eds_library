@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eds Library | Studio & Mix</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Eds Library</h1>
+        <p>Mixagem & Masterização de Alta Qualidade</p>
+    </header>
+
+    <main class="container">
+        <!-- Seção do Player de Áudio -->
+        <section class="player-section">
+            <h2>Track em Destaque</h2>
+            <div class="audio-card">
+                <div class="vinyl-icon">🎵</div>
+                <h3>Pede Pra Jesus (Mixagem)</h3>
+                <p class="artist-name">Produzido por Eliedson Silva</p>
+                
+                <!-- controlsList="nodownload" esconde o botão de baixar no Chrome/Edge -->
+                <audio id="meuAudio" controls controlsList="nodownload">
+                    <source src="audio/pede-pra-jesus.wav" type="audio/wav">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- Seção de Feedback -->
+        <section class="feedback-section">
+            <h2>Deixe seu Feedback</h2>
+            <p>Ouça em diferentes aparelhos e me diga o que achou da sonoridade!</p>
+            
+            <form id="feedbackForm">
+                <div class="input-group">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="comentario">Comentário / Feedback</label>
+                    <textarea id="comentario" rows="4" placeholder="Como soou no seu fone/caixa de som?" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Feedback</button>
+            </form>
+        </section>
+
+        <!-- Lista de Comentários -->
+        <section class="comments-section">
+            <h3>Feedbacks Recentes (<span id="commentCount">0</span>)</h3>
+            <div id="commentsList" class="comments-list">
+                <!-- Os comentários aparecerão aqui via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eds Library. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
